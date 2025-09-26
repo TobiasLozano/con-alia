@@ -1,0 +1,29 @@
+/* Evitar solapamiento con AppBar y TabBar */
+.app-content {
+	margin-top: 56px;
+	margin-bottom: 56px;
+}
+
+/* Fondo personalizado para List */
+.adm-list {
+	background: var(--color-secondary) !important;
+}
+/* TabBar personalizado */
+.adm-tab-bar {
+	background: #05668D !important;
+}
+.adm-tab-bar-item {
+	color: #AFC2D5 !important;
+}
+.adm-tab-bar-item-active {
+	color: #FFD166 !important;
+}
+/* Personalización de las estrellas del Rate en Inicio */
+.custom-rate .adm-rate-star {
+	font-size: 10px !important;
+	color: #faad14 !important;
+}
+body{
+  margin-top: 56px;
+}
+ 
