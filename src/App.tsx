@@ -28,11 +28,14 @@ const palette = {
 
 const App: React.FC = () => {
   return (
-   
       <RolProvider>
-        <AppWithTabs />
+        <div className="device-frame-wrapper">
+          <div className="device-frame-phone">
+            <AppWithTabs />
+          </div>
+        </div>
       </RolProvider>
-   );
+  );
 };
 
 const AppWithTabs: React.FC = () => {
@@ -40,21 +43,16 @@ const AppWithTabs: React.FC = () => {
   const [activeKey, setActiveKey] = React.useState('inicio');
   const tabs = getTabs(rolActual);
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', margin: 0, padding: 0 }}>
+  <div className="app-main-container">
       {/* AppBar */}
       <div style={{
-        width: '100vw',
-        height: 56,
+         height: 56,
         background: '#05668D',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
+ 
       }}>
         <img src="/icon.png" alt="Vite Logo" style={{ height: 32, marginLeft: 16, marginRight: 16 }} />
         <div style={{ flex: 1, textAlign: 'center', marginRight: 48 }}>
@@ -72,7 +70,7 @@ const AppWithTabs: React.FC = () => {
         activeKey={activeKey}
         onChange={setActiveKey}
         safeArea
-        style={{ width: '100vw', left: 0, right: 0, margin: 0, padding: 0, position: 'fixed', bottom: 0 }}
+        style={{   left: 0, right: 0, margin: 0, padding: 0 }}
       >
         {tabs.map(item => (
           <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
