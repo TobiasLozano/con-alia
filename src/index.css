@@ -39,7 +39,7 @@
 
 .device-frame-phone {
 	width: 100%;
-	max-width: 412px; /* iPhone/X-like width */
+	max-width: 350px; /* iPhone/X-like width */
 	margin: 10px auto;
 	box-shadow: 0 12px 40px rgba(0,0,0,0.18);
 	border: 8px solid #111;
